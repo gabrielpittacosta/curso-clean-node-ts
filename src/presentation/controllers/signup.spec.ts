@@ -1,10 +1,13 @@
 import { SignupController } from './signup'
 import { InvalidParamError, MissingParamError, ServerError } from '../errors'
 import { EmailValidator } from '../protocol'
+import { AddUser, AddUserModel } from '../../domain/usecases/add-user'
+import { User } from '../../domain/models/user'
 
 interface SutTypes {
   sut: SignupController
   emailValidatorStub: EmailValidator
+  addUserStub: AddUser
 }
 
 const makeEmailValidator = (): EmailValidator => {
@@ -17,11 +20,27 @@ const makeEmailValidator = (): EmailValidator => {
   return new EmailValidatorStub()
 }
 
+const makeAddUser = (): AddUser => {
+  class AddUserStub implements AddUser {
+    add (user: AddUserModel): User {
+      return {
+        id: 'valid_id',
+        name: 'valid_name',
+        email: 'valid_email@mail.com',
+        password: 'valid_password'
+      }
+    }
+  }
+
+  return new AddUserStub()
+}
+
 const makeSut = (): SutTypes => {
   const emailValidatorStub = makeEmailValidator()
-  const sut = new SignupController(emailValidatorStub)
+  const addUserStub = makeAddUser()
+  const sut = new SignupController(emailValidatorStub, addUserStub)
 
-  return { sut, emailValidatorStub }
+  return { sut, emailValidatorStub, addUserStub }
 }
 
 describe('SignUp Controller', () => {
@@ -123,23 +142,6 @@ describe('SignUp Controller', () => {
     expect(httpResponse.body).toEqual(new InvalidParamError('email'))
   })
 
-  test('Should call EmailValidator with correct email', () => {
-    const { sut, emailValidatorStub } = makeSut()
-    const isValidSpy = jest.spyOn(emailValidatorStub, 'isValid')
-    const httpRequest = {
-      body: {
-        name: 'any_name',
-        email: 'any_email@mail.com',
-        password: 'any_password',
-        passwordConfirmation: 'any_password'
-      }
-    }
-
-    sut.handle(httpRequest)
-
-    expect(isValidSpy).toHaveBeenCalledWith('any_email@mail.com')
-  })
-
   test('Should return 500 if EmailValidator throws', () => {
     const { sut, emailValidatorStub } = makeSut()
 
@@ -159,5 +161,43 @@ describe('SignUp Controller', () => {
 
     expect(httpResponse.statusCode).toBe(500)
     expect(httpResponse.body).toEqual(new ServerError())
+  })
+
+  test('Should call EmailValidator with correct email', () => {
+    const { sut, emailValidatorStub } = makeSut()
+    const isValidSpy = jest.spyOn(emailValidatorStub, 'isValid')
+    const httpRequest = {
+      body: {
+        name: 'any_name',
+        email: 'any_email@mail.com',
+        password: 'any_password',
+        passwordConfirmation: 'any_password'
+      }
+    }
+
+    sut.handle(httpRequest)
+
+    expect(isValidSpy).toHaveBeenCalledWith('any_email@mail.com')
+  })
+
+  test('Should call AddUser with correct values', () => {
+    const { sut, addUserStub } = makeSut()
+    const addSpy = jest.spyOn(addUserStub, 'add')
+    const httpRequest = {
+      body: {
+        name: 'any_name',
+        email: 'any_email@mail.com',
+        password: 'any_password',
+        passwordConfirmation: 'any_password'
+      }
+    }
+
+    sut.handle(httpRequest)
+
+    expect(addSpy).toHaveBeenCalledWith({
+      name: 'any_name',
+      email: 'any_email@mail.com',
+      password: 'any_password'
+    })
   })
 })
