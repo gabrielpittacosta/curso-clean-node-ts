@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0b12ba38-dd54-4f38-a6d5-cddcfd3fc79e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecases/add-user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecases/add-user.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/presentation/controllers/signup/signup.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/signup/signup.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/presentation/controllers/signup/signup.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/signup/signup.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/helper/http-helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/helper/http-helper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/protocol/controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/protocol/controller.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
