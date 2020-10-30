@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b12ba38-dd54-4f38-a6d5-cddcfd3fc79e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/utils/email-validator-adapter.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/email-validator-adapter.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +34,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/data/usecases/add-user" />
       <recent name="$PROJECT_DIR$/src/presentation/controllers/signup" />
     </key>
   </component>
@@ -46,6 +47,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603713437693</updated>
       <workItem from="1603713439094" duration="3113000" />
+      <workItem from="1604077606401" duration="1281000" />
     </task>
     <servers />
   </component>
@@ -53,25 +55,29 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1419" height="202" key="GridCell.Tab.0.bottom" timestamp="1603716845586">
+    <state x="471" y="242" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603846684270">
       <screen x="0" y="25" width="1440" height="819" />
     </state>
-    <state width="1419" height="202" key="GridCell.Tab.0.bottom/0.25.1440.819@0.25.1440.819" timestamp="1603716845586" />
-    <state width="1419" height="202" key="GridCell.Tab.0.center" timestamp="1603716845584">
+    <state x="471" y="242" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1440.819@0.25.1440.819" timestamp="1603846684270" />
+    <state width="1419" height="202" key="GridCell.Tab.0.bottom" timestamp="1603849064897">
       <screen x="0" y="25" width="1440" height="819" />
     </state>
-    <state width="1419" height="202" key="GridCell.Tab.0.center/0.25.1440.819@0.25.1440.819" timestamp="1603716845584" />
-    <state width="1419" height="202" key="GridCell.Tab.0.left" timestamp="1603716845583">
+    <state width="1419" height="202" key="GridCell.Tab.0.bottom/0.25.1440.819@0.25.1440.819" timestamp="1603849064897" />
+    <state width="1419" height="202" key="GridCell.Tab.0.center" timestamp="1603849064895">
       <screen x="0" y="25" width="1440" height="819" />
     </state>
-    <state width="1419" height="202" key="GridCell.Tab.0.left/0.25.1440.819@0.25.1440.819" timestamp="1603716845583" />
-    <state width="1419" height="202" key="GridCell.Tab.0.right" timestamp="1603716845585">
+    <state width="1419" height="202" key="GridCell.Tab.0.center/0.25.1440.819@0.25.1440.819" timestamp="1603849064895" />
+    <state width="1419" height="202" key="GridCell.Tab.0.left" timestamp="1603849064895">
       <screen x="0" y="25" width="1440" height="819" />
     </state>
-    <state width="1419" height="202" key="GridCell.Tab.0.right/0.25.1440.819@0.25.1440.819" timestamp="1603716845585" />
-    <state x="236" y="70" key="SettingsEditor" timestamp="1603713545663">
+    <state width="1419" height="202" key="GridCell.Tab.0.left/0.25.1440.819@0.25.1440.819" timestamp="1603849064895" />
+    <state width="1419" height="202" key="GridCell.Tab.0.right" timestamp="1603849064896">
       <screen x="0" y="25" width="1440" height="819" />
     </state>
-    <state x="236" y="70" key="SettingsEditor/0.25.1440.819@0.25.1440.819" timestamp="1603713545663" />
+    <state width="1419" height="202" key="GridCell.Tab.0.right/0.25.1440.819@0.25.1440.819" timestamp="1603849064896" />
+    <state x="236" y="70" key="SettingsEditor" timestamp="1604078048179">
+      <screen x="0" y="25" width="1440" height="819" />
+    </state>
+    <state x="236" y="70" key="SettingsEditor/0.25.1440.819@0.25.1440.819" timestamp="1604078048179" />
   </component>
 </project>
